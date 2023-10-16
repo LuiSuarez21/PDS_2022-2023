@@ -1,0 +1,49 @@
+<section>
+  <div id="main" class="wrapper style1">
+    <div class="container">
+      <header class="major">
+        <h2>Nova Tarefa</h2>
+      </header>
+      <h3>Tarefa</h3>
+      <form method="post" action="#">
+        <div class="row gtr-uniform gtr-50">
+          <div class="col-6 col-12-xsmall">
+            <input type="text" name="description" id="description" value="" placeholder="Descrição" />
+          </div>
+          <div class="col-6 col-12-xsmall">
+            <input type="date" name="start-date" id="start-date" value="" placeholder="Data inicial" />
+          </div>
+          <div class="col-6 col-12-xsmall">
+            <input type="date" name="end-date" id="end-date" value="" placeholder="Data final" />
+          </div>
+          <div class="col-6 col-12-xsmall">
+            <input type="date" name="date-bidding-start" id="date-bidding-start" value=""
+              placeholder="Date Bidding Start" />
+          </div>
+          <div class="col-6 col-12-xsmall">
+            <input type="date" name="date-bidding-end" id="date-bidding-end" value="" placeholder="Date Bidding End" />
+          </div>
+          <div class="col-6 col-12-xsmall">
+            <select [(ngModel)]="selectedCity" name="city">
+              <option *ngFor="let city of cities" [value]="city.id">{{ city.description }}</option>
+            </select>
+          </div>
+          <div class="col-6 col-12-medium">
+            <input type="checkbox" id="human" name="human" />
+            <label for="human">Sou um humano nao um robot</label>
+          </div>
+          <div class="col-12">
+            <ul class="actions">
+              <li>
+                <input type="reset" name="cancel" id="cancel" value="Cancelar" />
+              </li>
+              <li>
+                <input type="submit" name="create" id="create" value="Criar" class="primary" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

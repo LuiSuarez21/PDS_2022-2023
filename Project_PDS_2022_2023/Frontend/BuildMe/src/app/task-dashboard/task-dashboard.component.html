@@ -1,0 +1,38 @@
+<section>
+  <div id="main" class="wrapper style1">
+    <div class="container">
+      <header class="major">
+        <h2>Tarefas</h2>
+      </header>
+      <h3>Obras</h3>
+      <div class="table-wrapper">
+        <table class="alt">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Descrição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let task of tasks">
+              <td>{{ task.id }}</td>
+              <td>{{ task.description }}</td>
+            </tr>
+          </tbody>
+          <!-- <tfoot>
+            <tr>
+              <td>Total</td>
+              <td> </td>
+              <td>159.95</td>
+            </tr>
+          </tfoot> -->
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <ul class="actions">
+    <li><a href="#" class="button primary">Atualizar</a></li>
+  </ul>
+</section>

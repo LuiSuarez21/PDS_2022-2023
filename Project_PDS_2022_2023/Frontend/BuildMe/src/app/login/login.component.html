@@ -1,0 +1,21 @@
+<section>
+  <div id="main" class="wrapper style1">
+    <div class="container">
+      <header class="major">
+        <h2>Login</h2>
+      </header>
+      <h3>Login</h3>
+      <form (ngSubmit)="login()" #loginForm="ngForm">
+        <div>
+          <label>user name:</label>
+          <input type="text" name="username" id="username" [(ngModel)]="username" required />
+        </div>
+        <div>
+          <label>password:</label>
+          <input type="password" name="password" [(ngModel)]="password" required />
+        </div>
+        <button type="submit" [disabled]="!loginForm.valid">Entrar</button>
+      </form>
+    </div>
+  </div>
+</section>

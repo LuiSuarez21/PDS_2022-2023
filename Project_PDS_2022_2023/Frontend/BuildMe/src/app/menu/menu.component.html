@@ -1,0 +1,28 @@
+<header id="header">
+  <h1 id="logo"><a href="index.html">BuildME</a></h1>
+  <nav id="nav">
+    <ul>
+      <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="">Contactos</a></li>
+      <li><a routerLink="/gallery">Galeria</a></li>
+      <li *ngIf="isUserLoggedIn == 'false'"><a routerLink="/register">Registar</a></li>
+      <li *ngIf="isUserLoggedIn == 'true'">
+        <a routerLink="/task">Tarefa</a>
+      </li>
+      <li *ngIf="isUserLoggedIn == 'true'">
+        <a routerLink="/taskDashboard">Estado Tarefa</a>
+      </li>
+      <li *ngIf="isUserLoggedIn == 'true'">
+        <a routerLink="/userProfile">Perfil</a>
+      </li>
+
+
+      <li *ngIf="isUserLoggedIn == 'false'">
+        <a (click)="login()" class="button primary">LogIn</a>
+      </li>
+      <li *ngIf="isUserLoggedIn == 'true'">
+        <a (click)="logout()" class="button primary">LogOut</a>
+      </li>
+    </ul>
+  </nav>
+</header>
